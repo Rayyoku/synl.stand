@@ -85,7 +85,7 @@ game:service"RunService".RenderStepped:connect(function()
 end)
 
 game.StarterGui:SetCore("SendNotification", {
-	Title = "Synl.Stand"; 
+	Title = "Synl Stand"; 
 	Text = "rayyoku | paid";
 	Duration = 30;
 })
@@ -185,15 +185,6 @@ function Hit()
 		else
 			Player.Backpack:FindFirstChild('Combat').Parent = Player.Character
 		end   
-	else
-		if Attack == 'Light!' then
-			if Player.Character:FindFirstChild('Combat') then
-				Player.Character:FindFirstChild('Combat'):Activate()
-				Player.Character:FindFirstChild('Combat'):Deactivate()
-			else
-				Player.Backpack:FindFirstChild('Combat').Parent = Player.Character
-			end  
-		end
 	end
 end
 
@@ -989,11 +980,11 @@ commands.e = function(arguments)
 			wait()
 			repeat wait()
 				if game.Players[target1].Character.BodyEffects["K.O"].Value == true then
-					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[target1].Character.UpperTorso.Position) * CFrame.new(0,-6,0)
+					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[target1].Character.UpperTorso.Position) * CFrame.new(0,1,0)
 					wait(.4)
-					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[target1].Character.UpperTorso.Position) * CFrame.new(0,-6,0)
+					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[target1].Character.UpperTorso.Position) * CFrame.new(0,1,0)
 					wait()
-					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[target1].Character.UpperTorso.Position) * CFrame.new(0,-6,0)
+					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[target1].Character.UpperTorso.Position) * CFrame.new(0,1,0)
 					wait(.4)
 					game.ReplicatedStorage.MainEvent:FireServer("Grabbing")
 					wait(.6)
@@ -1073,7 +1064,7 @@ end)
 game:service"RunService".RenderStepped:connect(function()
 	if killed == true then
 		Hit()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[gettingkilled].Character.UpperTorso.Position) * CFrame.new(0,-10,0)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[gettingkilled].Character.UpperTorso.Position) * CFrame.new(0,-9,0)
 		game.Workspace.Camera.CameraSubject = game:GetService("Players")[gettingkilled].Character.UpperTorso
 	end
 end)	
@@ -1082,7 +1073,7 @@ end)
 game:service"RunService".RenderStepped:connect(function()
 	if killtheplayer == true and game.Players[brotagettingkilled].Character.BodyEffects["K.O"].Value == false then
 		Hit()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[brotagettingkilled].Character.UpperTorso.Position) * CFrame.new(0,-10,0)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players")[brotagettingkilled].Character.UpperTorso.Position) * CFrame.new(0,-9,0)
 		game.Workspace.Camera.CameraSubject = game:GetService("Players")[brotagettingkilled].Character.UpperTorso
 	else
 		if killtheplayer == true and  game.Players[brotagettingkilled].Character.BodyEffects["K.O"].Value == true then
@@ -2095,7 +2086,7 @@ game.Players.LocalPlayer.CharacterAdded:connect(function()
 	wait(1)
 	local hover = Instance.new("Animation", game.Workspace)
 	hover.Name = "Hover"
-	hover.AnimationId = "rbxassetid://3541114300"
+	hover.AnimationId = "rbxassetid://3541044388"
 	local char = game.Players.LocalPlayer.Character
 	hoveranim = char.Humanoid:LoadAnimation(game.Workspace.Hover)
 	hoveranim:Play()
